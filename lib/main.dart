@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:paybus/recargar.dart';
 import 'home.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -42,6 +43,18 @@ class _HomeState extends State<Home> {
     return  MaterialApp(
         debugShowCheckedModeBanner: false,
       home: Scaffold(
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
+
+          backgroundColor: Color(0xffd52f54),
+          onPressed: () {
+            Navigator.of(context).push(
+                new CupertinoPageRoute(
+                    builder: (BuildContext context) =>
+                    new Recargar()));
+          },
+          child: Icon(Icons.monetization_on),
+        ),
         appBar: AppBar(
           backgroundColor: _colorbase,
           leading: Builder(

@@ -13,13 +13,7 @@ class Home1 extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
       home: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          backgroundColor: Color(0xffd52f54),
-          onPressed: () {
 
-            },
-          child: Icon(Icons.monetization_on),
-        ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         backgroundColor: Colors.white,
 
