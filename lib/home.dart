@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/rendering.dart';
+import 'package:paybus/redimir.dart';
 import 'main.dart';
 class Home1 extends StatelessWidget {
 
@@ -104,7 +105,10 @@ class Home1 extends StatelessWidget {
                       child:  RaisedButton(
                         color: Color(0xffe93c54),
                         onPressed: () {
-
+                          Navigator.of(context).push(
+                              new CupertinoPageRoute(
+                                  builder: (BuildContext context) =>
+                                  new Redimir()));
                         },
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
