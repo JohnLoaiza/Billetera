@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:paybus/recargar.dart';
+import 'package:paybus/tucuenta.dart';
 import 'home.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -129,6 +130,7 @@ class MenuDrawler extends StatelessWidget {
             ),
 
             accountName: Text("Name"),
+
             accountEmail: Text("E-mail"),
             currentAccountPicture: CircleAvatar(
                 backgroundColor: Colors.white,
@@ -140,7 +142,10 @@ class MenuDrawler extends StatelessWidget {
             leading: Icon(Icons.account_circle),
             title: Text("Tu Cuenta"),
             onTap: () {
-
+              Navigator.of(context).push(
+                  new CupertinoPageRoute(
+                      builder: (BuildContext context) =>
+                      new Tucuenta()));
             } ,
           ),
           ListTile(

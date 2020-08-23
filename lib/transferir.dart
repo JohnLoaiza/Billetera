@@ -1,13 +1,13 @@
-import 'dart:developer';
-import 'transferir.dart';
+
+
 import 'package:flutter/cupertino.dart';
-import 'home.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:paybus/main.dart';
 
 
-class Redimir extends StatelessWidget {
+class Transferir extends StatelessWidget {
   Color _colorbase = Color(0xff0066FF);
   String _email;
   @override
@@ -19,7 +19,7 @@ class Redimir extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xff011c74),
-          title: Text("Redimir", style: TextStyle(color: Colors.white,
+          title: Text("Transferir", style: TextStyle(color: Colors.white,
             fontSize: 14,
           ),
           ),
@@ -46,13 +46,13 @@ class Redimir extends StatelessWidget {
                 children: <Widget>[
 
                   Container(
-                    margin: EdgeInsets.only(bottom: 100),
+                    margin: EdgeInsets.only(bottom: 20),
                     height: 35,
                     width: 250,
                     alignment: AlignmentDirectional.bottomCenter,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(7),
-                        color: Color(0xff2a408a),
+                      borderRadius: BorderRadius.circular(7),
+                      color: Color(0xff2a408a),
 
                     ),
 
@@ -64,16 +64,78 @@ class Redimir extends StatelessWidget {
                         valor.length < 0 ? 'El codigo no exite' : null,
                         onSaved: (valor) => _email = valor,
                         decoration: InputDecoration(
-
-                          labelText: 'Cupon',
+                          labelText: '   Contacto',
                           alignLabelWithHint: true,
                           labelStyle: TextStyle(
                             color: Color(0xffaab3d0),
-
-
                           ),
 
+                          suffixIcon: Icon(Icons.search, color: Colors.white,),
+
                         )
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 20),
+                    height: 35,
+                    width: 250,
+                    alignment: AlignmentDirectional.bottomCenter,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(7),
+                      color: Color(0xff2a408a),
+
+                    ),
+
+                    child:
+                    TextFormField(
+                      decoration: InputDecoration(
+                        labelText: '   Cantidad',
+                        alignLabelWithHint: true,
+                        labelStyle: TextStyle(
+                          color: Color(0xffaab3d0),
+                        ),
+
+
+
+                      ),
+                        textAlign: TextAlign.center,
+                        validator: (valor) =>
+                        valor.length < 0 ? 'El codigo no exite' : null,
+                        onSaved: (valor) => _email = valor,
+
+
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(bottom: 60),
+                    height: 120,
+                    width: 250,
+                    alignment: AlignmentDirectional.bottomCenter,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(7),
+                      color: Color(0xff2a408a),
+
+                    ),
+
+                    child:
+                    TextFormField(
+                      decoration: InputDecoration(
+                        labelText: '   Mensaje',
+                        alignLabelWithHint: true,
+                        labelStyle: TextStyle(
+                          color: Color(0xffaab3d0),
+
+                        ),
+
+
+
+                      ),
+                      textAlign: TextAlign.center,
+                      validator: (valor) =>
+                      valor.length < 0 ? 'El codigo no exite' : null,
+                      onSaved: (valor) => _email = valor,
+
+
                     ),
                   ),
 
@@ -97,12 +159,12 @@ class Redimir extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.only(top: 9),
                         decoration: BoxDecoration(
-                         color: Color(0xffd52f54),
+                          color: Color(0xffd52f54),
                         ),
                         width: 204,
                         height: 44,
                         child: Text(
-                          "CANJEAR",
+                          "TRANSFERIR",
                           textAlign: TextAlign.center,
                           style: TextStyle(color: Colors.white, fontSize: 14),
                         ),
@@ -112,44 +174,7 @@ class Redimir extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Container(
-                    margin: EdgeInsets.all(5),
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: Color(0xff011c74),
-                        border: Border.all(
-                          color: Color(0xffd52f54),
-                          width: 2,
-                        ),
-                        borderRadius: BorderRadius.circular(7)
-                    ),
-                    child: RaisedButton(
-                      color: Color(0xff011c74),
 
-                      onPressed: () {
-                        Navigator.of(context).push(
-                            new CupertinoPageRoute(
-                                builder: (BuildContext context) =>
-                                new Transferir()));
-                      },
-                      child: Container(
-                        padding: EdgeInsets.only(top: 9),
-                        decoration: BoxDecoration(
-                       color: Color(0xff011c74)
-                        ),
-                        width: 200,
-                        height: 40,
-                        child: Text(
-                          "ESCANEAR QR",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(color: Color(0xffd52f54), fontSize: 14, ),
-                        ),
-                      ),
-                      shape: new RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15),
-                      ),
-                    ),
-                  ),
 
                 ],
               ),

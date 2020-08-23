@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/rendering.dart';
+import 'package:paybus/activar.dart';
 import 'package:paybus/redimir.dart';
+import 'package:paybus/transferir.dart';
+import 'comprar.dart';
 import 'main.dart';
 class Home1 extends StatelessWidget {
 
@@ -42,7 +45,10 @@ class Home1 extends StatelessWidget {
                     child:  RaisedButton(
                       color: Color(0xff65cc78),
                         onPressed: () {
-
+                          Navigator.of(context).push(
+                              new CupertinoPageRoute(
+                                  builder: (BuildContext context) =>
+                                  new Activar()));
                         },
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -65,7 +71,10 @@ class Home1 extends StatelessWidget {
                       child:  RaisedButton(
                         color: Color(0xffcd3585),
                         onPressed: () {
-
+                          Navigator.of(context).push(
+                              new CupertinoPageRoute(
+                                  builder: (BuildContext context) =>
+                                  new Comprar()));
                         },
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -125,7 +134,10 @@ class Home1 extends StatelessWidget {
                       child:  RaisedButton(
                         color: Color(0xff59c0cd),
                         onPressed: () {
-
+                          Navigator.of(context).push(
+                              new CupertinoPageRoute(
+                                  builder: (BuildContext context) =>
+                                  new Transferir()));
                         },
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
